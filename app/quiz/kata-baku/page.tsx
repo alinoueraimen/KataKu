@@ -24,14 +24,24 @@ function page() {
  
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black p-6">
-      <QuizBox
+      
+        <QuizBox
+  question="Mana yang baku?"
+  options={[q.a,q.b]} 
+  correct={q.correct}
+  current={3}
+  total={questions.length}
+  onNext={handleNext}
+/>
+     
+      {/* <QuizBox
         optionA={q.a}
         optionB={q.b}
         correct={q.correct}
         current={index + 1}
         total={questions.length}
         onNext={handleNext}
-      />
+      /> */}
     </div>
   );
 }
